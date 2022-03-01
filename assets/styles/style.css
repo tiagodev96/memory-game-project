@@ -13,6 +13,12 @@ body {
   font-family: "Righteous", sans-serif;
 }
 
+#timer {
+  position: absolute;
+  left: 150px;
+  font-size: 3rem;
+}
+
 /* _________________ CARD _________________ */
 .card {
   cursor: pointer;

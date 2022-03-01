@@ -7,6 +7,8 @@ startGame();
 
 function startGame() {
   initializeCards(game.createCardsFromTechs());
+  game.startTimer();
+  game.showOnTimer();
 }
 
 function initializeCards(cards) {
@@ -54,6 +56,8 @@ function flipCard() {
       if (game.checkMatch()) {
         game.clearCards();
         if (game.checkGameOver()) {
+          game.stopTimer();
+          showTimeToComplete();
           let gameOverLayer = document.getElementById("gameOver");
           gameOverLayer.style.display = "flex";
         }
@@ -71,9 +75,15 @@ function flipCard() {
   }
 }
 
+function showTimeToComplete() {
+  let div = document.getElementById("timeToComplete");
+  div.innerHTML = `You took ${game.time} seconds to finish the game!`;
+}
+
 function restart() {
   game.clearCards();
   startGame();
   let gameOverLayer = document.getElementById("gameOver");
   gameOverLayer.style.display = "none";
+  game.clicks = 0;
 }

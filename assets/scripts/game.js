@@ -2,8 +2,28 @@ let game = {
   lockMode: false,
   firstCard: null,
   secondCard: null,
+  clicks: 0,
+  time: 0,
+  interval: null,
 
   cards: null,
+
+  startTimer: function () {
+    this.time = 0;
+    this.interval = setInterval(() => {
+      this.time++;
+      this.showOnTimer();
+    }, 1000);
+  },
+
+  showOnTimer: function () {
+    let number = document.getElementById("number");
+    number.innerHTML = this.time;
+  },
+
+  stopTimer: function () {
+    clearInterval(this.interval);
+  },
 
   setCard: function (id) {
     let card = this.cards.filter((card) => card.id === id)[0];

@@ -9,7 +9,10 @@ This memory game was created to show skills with HTML, CSS and JavaScript. Inter
 
 ## Layout Web
 ![Web 1 - Game Started](https://i.ibb.co/M8j0mk5/Capture-1.png)
-![Web 2 - Game Finished](https://i.ibb.co/x8HRcMM/Capture-2.png)
+
+![Web 2 - Game Dynamics](https://media.giphy.com/media/QFEs26rKp3OJ0FLprj/giphy.gif)
+
+![Web 3 - Game Finished](https://i.ibb.co/x8HRcMM/Capture-2.png)
 
 # Technologies Used
 ## Front-end
